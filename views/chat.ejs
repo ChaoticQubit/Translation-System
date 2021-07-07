@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>TranslateMe | Your Personal Translator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="choices" class="modal">
+            <div class="fill-choice">
+                <h2 class="heading">Hello Chatters!!</h2>
+                <div style="height: 65%;">
+                    <div class="per-1">
+                        <h3 class="heading">Person 1 Details</h3>
+                        <div style="margin-top: 7%;">
+                            <label for="name-m-1">Enter your name: </label>
+                            <input type="text" name="name-m-1" id="name-m-1" required>
+                        </div>
+                        <div style="margin-top: 4%;">
+                            <label for="lang-select-1">Select your language: </label>
+                            <select name="lang-select-1" id="lang-select-1" required>
+                                <option value="0" id="0" name="0">--Select a language--</option>
+                                <option value="English" id="en" name="en">English</option>
+                                <option value="Spanish" id="es" name="es">Spanish</option>
+                                <option value="German" id="de" name="de">German</option>
+                                <option value="Greek" id="el" name="el">Greek</option>
+                                <option value="French" id="fr" name="fr">French</option>
+                                <option value="Hindi" id="hi" name="hi">Hindi</option>
+                                <option value="Indonesian" id="id" name="id">Indonesian</option>
+                                <option value="Japanese" id="ja" name="ja">Japanese</option>
+                                <option value="Dutch" id="nl" name="nl">Dutch</option>
+                                <option value="Portuguese" id="pt" name="pt">Portuguese</option>
+                                <option value="Russian" id="ru" name="ru">Russian</option>
+                                <option value="Urdu" id="ur" name="ur">Urdu</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="per-2">
+                        <h3 class="heading">Person 2 Details</h3>
+                        <div style="margin-top: 7%;">
+                            <label for="name-m-2">Enter your name: </label>
+                            <input type="text" name="name-m-2" id="name-m-2" required>
+                        </div>
+                        <div style="margin-top: 4%;">
+                            <label for="lang-select-2">Select your language: </label>
+                            <select name="lang-select-2" id="lang-select-2" required>
+                                <option value="0" id="0" name="0">--Select a language--</option>
+                                <option value="English" id="en" name="en">English</option>
+                                <option value="Spanish" id="es" name="es">Spanish</option>
+                                <option value="German" id="de" name="de">German</option>
+                                <option value="Greek" id="el" name="el">Greek</option>
+                                <option value="French" id="fr" name="fr">French</option>
+                                <option value="Hindi" id="hi" name="hi">Hindi</option>
+                                <option value="Indonesian" id="id" name="id">Indonesian</option>
+                                <option value="Japanese" id="ja" name="ja">Japanese</option>
+                                <option value="Dutch" id="nl" name="nl">Dutch</option>
+                                <option value="Portuguese" id="pt" name="pt">Portuguese</option>
+                                <option value="Russian" id="ru" name="ru">Russian</option>
+                                <option value="Urdu" id="ur" name="ur">Urdu</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2%;">
+                    <button type="submit" class="btn-ok" id="okay" onclick="fillDetails()">START CHATTING!</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="top-view">
+                <div class="person-1">
+                    <div style="margin-top: 3%;">
+                        <label id="name-1">Person 1</label>
+                    </div>
+                    <label id="lang-1">English</label>
+                </div>
+                <div class="session">
+                    <div style="margin-top: 7%;">
+                        <button class="terminate-btn btn btn-danger" id="terminate">Terminate Session</button>
+                    </div>
+                </div>
+                <div class="person-2">
+                    <div style="margin-top: 3%;">
+                        <label id="name-2">Person 2</label>
+                    </div>
+                    <label id="lang-2">Spanish</label>
+                </div>
+            </div>
+
+            <div class="message-view">
+                <div id="chat-1">
+                    <ul class="messages" id="messages-1"></ul>
+                </div>
+                <div id="chat-2">
+                    <ul class="messages" id="messages-2"></ul>
+                </div>
+
+                <div class="message-template">
+                    <li class="message">
+                        <div class="avatar"></div>
+                        <div class="text-wrapper">
+                            <div class="message-text"></div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+
+            <div class="bottom-view">
+                <div id="field-1">
+                    <div style="margin-top: 2%; text-align: center;">
+                        <input type="text" class="form__input" id="message-1" name="message1" placeholder="Enter your message..." required="" />
+                        <button id="send-1">Send</button>
+                    </div>
+                </div>
+                <div id="field-2">
+                    <div style="margin-top: 2%; text-align: center;">
+                        <input type="text" class="form__input" id="message-2" name="message2" placeholder="Enter your message..." required="" />
+                        <button id="send-2">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/messages.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/logs.js"></script>
+</body>
+</html>
