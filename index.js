@@ -26,7 +26,7 @@ app.get("/translate", function(req, response){
             'from': req.query.lang_from
         },
         headers: {
-            'Ocp-Apim-Subscription-Key': '7a4742b517794a3888700a6bbe3a8bda',
+            'Ocp-Apim-Subscription-Key': '--API Key--',
             'Ocp-Apim-Subscription-Region': 'eastus',
             'Content-type': 'application/json',
         },
